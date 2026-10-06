@@ -5,7 +5,8 @@ from orchestrator import PCAgentOrchestrator
 st.set_page_config(
     page_title="PC-AgentIntel | Tư Vấn Phần Cứng PC",
     page_icon="💻",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed"
 )
 
 # Tối giản hóa CSS chuẩn phong cách trang công nghệ thương mại hiện đại
@@ -50,57 +51,24 @@ st.markdown("""
         background-color: #1D4ED8;
         color: white;
     }
+    
+    /* Ẩn hoàn toàn thanh Sidebar để giao diện như hệ thống Web Portal bình thường */
+    [data-testid="stSidebar"], [data-testid="collapsedControl"] {
+        display: none !important;
+    }
+    
+    .block-container {
+        max-width: 1000px !important;
+        padding-top: 2.5rem !important;
+        padding-bottom: 4rem !important;
+        margin: 0 auto !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
 # Tiêu đề sản phẩm thương mại thanh lịch
 st.markdown('<div class="header-title">💻 PC-AgentIntel</div>', unsafe_allow_html=True)
 st.markdown('<div class="header-sub">Hệ thống Tư Vấn Cấu Hình & Kiểm Định Tương Thích Phần Cứng Máy Tính</div>', unsafe_allow_html=True)
-
-# SIDEBAR: Bảng điều khiển kiến trúc kỹ thuật dành cho Giảng viên / Thẩm định viên
-st.sidebar.markdown("### 🟢 Trạng Thái Hệ Thống")
-st.sidebar.info("""**Core LLM:** Google Gemini 3.5 Flash  
-**Cơ chế:** Dual-Engine (AI + Rule Heuristics)  
-**Độ sẵn sàng:** 100% High Availability""")
-
-st.sidebar.markdown("### 🤖 Kiến Trúc 2 AI Agents")
-st.sidebar.markdown("""
-- **Agent 1 (Spec & Intent Analyst):**
-  - Bóc tách NLP tiếng Việt, từ lóng phần cứng & ngân sách.
-  - **Hybrid Build:** Nhận diện linh kiện có sẵn (khóa 0đ, giữ nguyên cấu hình).
-  - Lập hồ sơ Data Contract & kích hoạt Guardrails an toàn.
-- **Agent 2 (Compatibility Engineer):**
-  - Điều phối **4 Python Tools** chuyên sâu.
-  - Thẩm định tương thích vật lý (Socket, TDP, RAM DDR4/DDR5).
-  - Đảm bảo tải nguồn (Headroom $\\ge 20\\%$) & nghẽn cổ chai ($< 15\\%$).
-  - Phê duyệt cấu hình đạt chuẩn 5 sao.
-""")
-
-st.sidebar.markdown("### 🛠️ Bộ 4 Công Cụ Chuyên Sâu (Tools)")
-st.sidebar.markdown("""
-1. 🔍 **DBLookupTool:** Tra cứu thông số & giá CSDL 8 danh mục linh kiện.
-2. ⚡ **PSUCalculatorTool:** Tính công suất thực + Headroom dự phòng an toàn.
-3. ⚖️ **BottleneckTool:** Tính tỉ lệ cân bằng hiệu năng CPU - GPU.
-4. 🏗️ **FullPCBuildTool:** Tự động ráp dàn 8 món tối ưu theo ngân sách & socket.
-""")
-
-st.sidebar.markdown("### 🎯 3 Chế Độ Tư Vấn Thực Chiến")
-st.sidebar.markdown("""
-- 🟢 **Ráp PC mới 100%:** Lên trọn bộ 8 món linh kiện tối ưu chi phí.
-- 🔵 **Hybrid Build:** Tận dụng linh kiện cũ, chỉ mua linh kiện còn thiếu.
-- 🟣 **Nâng cấp lẻ & Cảnh báo:** Đề xuất nâng cấp GPU/CPU kèm bảo vệ phần cứng.
-""")
-
-st.sidebar.markdown("### 📦 CSDL Phần Cứng Chuẩn Hóa")
-st.sidebar.markdown("""
-- **VGA:** 29 dòng (GTX 1050 Ti $\\rightarrow$ RTX 5090)
-- **CPU:** 24 dòng (Intel Gen 12-14, Core Ultra, AMD Ryzen 5000/7000/9000)
-- **Bo mạch chủ:** H610, B760, Z790, B650, X670
-- **RAM:** DDR4 3200MHz $\\rightarrow$ DDR5 6000MHz CL30
-- **SSD:** NVMe PCIe Gen 4x4 (3,500 - 7,450 MB/s)
-- **PSU:** 450W $\\rightarrow$ 1000W ATX 3.0 PCIe 5.0 (Chuẩn 80 Plus)
-- **Tản nhiệt & Case:** Tản khí CR1000, AIO 240/360 LCD, Case Bể Cá Panoramic
-""")
 
 # Ô nhập liệu duy nhất
 user_query = st.text_area(
