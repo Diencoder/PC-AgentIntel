@@ -77,7 +77,7 @@ class SpecAnalystAgent:
 
     def analyze(self, query: str) -> HardwareSpecContract:
         if self.client:
-            models_to_try = [self.model_name, "gemini-3.5-flash-lite", "gemini-flash-lite-latest"]
+            models_to_try = [self.model_name, "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-flash-lite-latest"]
             seen = set()
             models_to_try = [m for m in models_to_try if m and not (m in seen or seen.add(m))]
             

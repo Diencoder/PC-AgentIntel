@@ -151,7 +151,7 @@ class CompatibilityAgent:
         # TỔNG HỢP LỜI TƯ VẤN CỦA AGENT 2 BẰNG LLM HOẶC HEURISTIC
         agent2_consultation = ""
         if self.client:
-            models_to_try = [self.model_name, "gemini-3.5-flash-lite", "gemini-flash-lite-latest"]
+            models_to_try = [self.model_name, "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-flash-lite-latest"]
             seen = set()
             models_to_try = [m for m in models_to_try if m and not (m in seen or seen.add(m))]
 
