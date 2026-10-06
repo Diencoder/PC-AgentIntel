@@ -1,0 +1,862 @@
+{
+  "gpus": [
+    {
+      "id": "gpu_rtx5090",
+      "model": "NVIDIA GeForce RTX 5090 32GB",
+      "tdp_watt": 600,
+      "recommended_psu_watt": 1000,
+      "vram_gb": 32,
+      "power_connectors": "1x 16-pin (12V-2x6)",
+      "market_price_used_vnd": 65000000,
+      "performance_tier": "Enthusiast 8K / AI Beast",
+      "pcie_gen": "PCIe 5.0 x16"
+    },
+    {
+      "id": "gpu_rtx5080",
+      "model": "NVIDIA GeForce RTX 5080 16GB",
+      "tdp_watt": 400,
+      "recommended_psu_watt": 850,
+      "vram_gb": 16,
+      "power_connectors": "1x 16-pin (12V-2x6)",
+      "market_price_used_vnd": 35000000,
+      "performance_tier": "Enthusiast 4K Ultra",
+      "pcie_gen": "PCIe 5.0 x16"
+    },
+    {
+      "id": "gpu_rtx5070",
+      "model": "NVIDIA GeForce RTX 5070 12GB",
+      "tdp_watt": 250,
+      "recommended_psu_watt": 750,
+      "vram_gb": 12,
+      "power_connectors": "1x 16-pin (12V-2x6)",
+      "market_price_used_vnd": 18500000,
+      "performance_tier": "1440p / 4K DLSS 4",
+      "pcie_gen": "PCIe 5.0 x16"
+    },
+    {
+      "id": "gpu_rtx4090",
+      "model": "NVIDIA GeForce RTX 4090 24GB",
+      "tdp_watt": 450,
+      "recommended_psu_watt": 850,
+      "vram_gb": 24,
+      "power_connectors": "1x 16-pin (12VHPWR)",
+      "market_price_used_vnd": 46000000,
+      "performance_tier": "Enthusiast 4K Max / AI Heavy",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx4080s",
+      "model": "NVIDIA GeForce RTX 4080 Super 16GB",
+      "tdp_watt": 320,
+      "recommended_psu_watt": 750,
+      "vram_gb": 16,
+      "power_connectors": "1x 16-pin",
+      "market_price_used_vnd": 27500000,
+      "performance_tier": "4K High Frame Rate",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx4070tis",
+      "model": "NVIDIA GeForce RTX 4070 Ti Super 16GB",
+      "tdp_watt": 285,
+      "recommended_psu_watt": 750,
+      "vram_gb": 16,
+      "power_connectors": "1x 16-pin",
+      "market_price_used_vnd": 22000000,
+      "performance_tier": "1440p Max / 4K Entry",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx4070s",
+      "model": "NVIDIA GeForce RTX 4070 Super 12GB",
+      "tdp_watt": 220,
+      "recommended_psu_watt": 650,
+      "vram_gb": 12,
+      "power_connectors": "1x 16-pin",
+      "market_price_used_vnd": 16500000,
+      "performance_tier": "1440p Ultra / High Efficiency",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx4060ti_16g",
+      "model": "NVIDIA GeForce RTX 4060 Ti 16GB",
+      "tdp_watt": 165,
+      "recommended_psu_watt": 550,
+      "vram_gb": 16,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 11500000,
+      "performance_tier": "1080p Max / AI LLM Budget",
+      "pcie_gen": "PCIe 4.0 x8"
+    },
+    {
+      "id": "gpu_rtx4060ti_8g",
+      "model": "NVIDIA GeForce RTX 4060 Ti 8GB",
+      "tdp_watt": 160,
+      "recommended_psu_watt": 550,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 9800000,
+      "performance_tier": "1080p Ultra / Frame Gen",
+      "pcie_gen": "PCIe 4.0 x8"
+    },
+    {
+      "id": "gpu_rtx4060",
+      "model": "NVIDIA GeForce RTX 4060 8GB",
+      "tdp_watt": 115,
+      "recommended_psu_watt": 500,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 7200000,
+      "performance_tier": "1080p Ultra / Super Efficient",
+      "pcie_gen": "PCIe 4.0 x8"
+    },
+    {
+      "id": "gpu_rx7900xtx",
+      "model": "AMD Radeon RX 7900 XTX 24GB",
+      "tdp_watt": 355,
+      "recommended_psu_watt": 850,
+      "vram_gb": 24,
+      "power_connectors": "2x 8-pin",
+      "market_price_used_vnd": 24000000,
+      "performance_tier": "4K Ultra Gaming Beast",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rx7800xt",
+      "model": "AMD Radeon RX 7800 XT 16GB",
+      "tdp_watt": 263,
+      "recommended_psu_watt": 700,
+      "vram_gb": 16,
+      "power_connectors": "2x 8-pin",
+      "market_price_used_vnd": 13500000,
+      "performance_tier": "1440p High FPS Native",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rx7600xt",
+      "model": "AMD Radeon RX 7600 XT 16GB",
+      "tdp_watt": 190,
+      "recommended_psu_watt": 600,
+      "vram_gb": 16,
+      "power_connectors": "2x 8-pin",
+      "market_price_used_vnd": 8500000,
+      "performance_tier": "1080p Esports / 16GB VRAM",
+      "pcie_gen": "PCIe 4.0 x8"
+    },
+    {
+      "id": "gpu_rx7600",
+      "model": "AMD Radeon RX 7600 8GB",
+      "tdp_watt": 165,
+      "recommended_psu_watt": 550,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 6200000,
+      "performance_tier": "1080p Ultra Esports",
+      "pcie_gen": "PCIe 4.0 x8"
+    },
+    {
+      "id": "gpu_rtx3080",
+      "model": "NVIDIA GeForce RTX 3080 10GB",
+      "tdp_watt": 320,
+      "recommended_psu_watt": 750,
+      "vram_gb": 10,
+      "power_connectors": "2x 8-pin",
+      "market_price_used_vnd": 9500000,
+      "performance_tier": "4K Gaming / Heavy Render",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx3070",
+      "model": "NVIDIA GeForce RTX 3070",
+      "tdp_watt": 220,
+      "recommended_psu_watt": 650,
+      "vram_gb": 8,
+      "power_connectors": "2x 8-pin",
+      "market_price_used_vnd": 6800000,
+      "performance_tier": "1440p High-Ultra",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx3060ti",
+      "model": "NVIDIA GeForce RTX 3060 Ti 8GB",
+      "tdp_watt": 200,
+      "recommended_psu_watt": 600,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 5900000,
+      "performance_tier": "1440p Medium-High",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx3060",
+      "model": "NVIDIA GeForce RTX 3060 12GB",
+      "tdp_watt": 170,
+      "recommended_psu_watt": 550,
+      "vram_gb": 12,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 5500000,
+      "performance_tier": "1080p Ultra / AI Workload Entry",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rx6700xt",
+      "model": "AMD Radeon RX 6700 XT 12GB",
+      "tdp_watt": 230,
+      "recommended_psu_watt": 650,
+      "vram_gb": 12,
+      "power_connectors": "1x 8-pin + 1x 6-pin",
+      "market_price_used_vnd": 5800000,
+      "performance_tier": "1440p High / 12GB VRAM",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_rtx2070s",
+      "model": "NVIDIA GeForce RTX 2070 Super",
+      "tdp_watt": 215,
+      "recommended_psu_watt": 650,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin + 1x 6-pin",
+      "market_price_used_vnd": 4900000,
+      "performance_tier": "1440p Medium-High",
+      "pcie_gen": "PCIe 3.0 x16"
+    },
+    {
+      "id": "gpu_rx6600",
+      "model": "AMD Radeon RX 6600",
+      "tdp_watt": 132,
+      "recommended_psu_watt": 450,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 4200000,
+      "performance_tier": "1080p Ultra / High Efficiency",
+      "pcie_gen": "PCIe 4.0 x8"
+    },
+    {
+      "id": "gpu_rtx2060s",
+      "model": "NVIDIA GeForce RTX 2060 Super",
+      "tdp_watt": 175,
+      "recommended_psu_watt": 550,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 3900000,
+      "performance_tier": "1080p High / Ray Tracing Entry",
+      "pcie_gen": "PCIe 3.0 x16"
+    },
+    {
+      "id": "gpu_arc_b580",
+      "model": "Intel Arc Battlemage B580 12GB",
+      "tdp_watt": 190,
+      "recommended_psu_watt": 600,
+      "vram_gb": 12,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 6900000,
+      "performance_tier": "1440p XeSS / 12GB Modern",
+      "pcie_gen": "PCIe 4.0 x8"
+    },
+    {
+      "id": "gpu_arc_a770",
+      "model": "Intel Arc A770 16GB",
+      "tdp_watt": 225,
+      "recommended_psu_watt": 650,
+      "vram_gb": 16,
+      "power_connectors": "1x 8-pin + 1x 6-pin",
+      "market_price_used_vnd": 6500000,
+      "performance_tier": "1440p Gaming / 16GB Creator",
+      "pcie_gen": "PCIe 4.0 x16"
+    },
+    {
+      "id": "gpu_gtx1660s",
+      "model": "NVIDIA GeForce GTX 1660 Super",
+      "tdp_watt": 125,
+      "recommended_psu_watt": 450,
+      "vram_gb": 6,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 2800000,
+      "performance_tier": "1080p Esports / Medium",
+      "pcie_gen": "PCIe 3.0 x16"
+    },
+    {
+      "id": "gpu_gtx1650",
+      "model": "NVIDIA GeForce GTX 1650 4GB",
+      "tdp_watt": 75,
+      "recommended_psu_watt": 350,
+      "vram_gb": 4,
+      "power_connectors": "None (Khe PCIe)",
+      "market_price_used_vnd": 2100000,
+      "performance_tier": "1080p Low-Med Esports",
+      "pcie_gen": "PCIe 3.0 x16"
+    },
+    {
+      "id": "gpu_gtx1060_6g",
+      "model": "NVIDIA GeForce GTX 1060 6GB",
+      "tdp_watt": 120,
+      "recommended_psu_watt": 450,
+      "vram_gb": 6,
+      "power_connectors": "1x 6-pin",
+      "market_price_used_vnd": 1900000,
+      "performance_tier": "1080p Esports Legacy",
+      "pcie_gen": "PCIe 3.0 x16"
+    },
+    {
+      "id": "gpu_gtx1050ti",
+      "model": "NVIDIA GeForce GTX 1050 Ti 4GB",
+      "tdp_watt": 75,
+      "recommended_psu_watt": 350,
+      "vram_gb": 4,
+      "power_connectors": "None (Khe PCIe)",
+      "market_price_used_vnd": 1500000,
+      "performance_tier": "720p / 1080p Esports Budget",
+      "pcie_gen": "PCIe 3.0 x16"
+    },
+    {
+      "id": "gpu_rx580_8g",
+      "model": "AMD Radeon RX 580 8GB",
+      "tdp_watt": 185,
+      "recommended_psu_watt": 500,
+      "vram_gb": 8,
+      "power_connectors": "1x 8-pin",
+      "market_price_used_vnd": 1300000,
+      "performance_tier": "1080p Budget VRAM King",
+      "pcie_gen": "PCIe 3.0 x16"
+    }
+  ],
+  "cpus": [
+    {
+      "id": "cpu_ultra_9_285k",
+      "model": "Intel Core Ultra 9 285K",
+      "tdp_watt": 125,
+      "peak_power_watt": 250,
+      "socket": "LGA1851",
+      "generation_tier": "Modern Core Ultra Gen 2 (Arrow Lake)",
+      "recommended_gpu_max": "RTX 5090 / RTX 4090"
+    },
+    {
+      "id": "cpu_ultra_7_265k",
+      "model": "Intel Core Ultra 7 265K",
+      "tdp_watt": 125,
+      "peak_power_watt": 250,
+      "socket": "LGA1851",
+      "generation_tier": "Modern Core Ultra Gen 2 (Arrow Lake)",
+      "recommended_gpu_max": "RTX 5080 / RTX 4080 Super"
+    },
+    {
+      "id": "cpu_ultra_5_245k",
+      "model": "Intel Core Ultra 5 245K",
+      "tdp_watt": 125,
+      "peak_power_watt": 159,
+      "socket": "LGA1851",
+      "generation_tier": "Modern Core Ultra Gen 2 (Arrow Lake)",
+      "recommended_gpu_max": "RTX 5070 / RTX 4070 Ti Super"
+    },
+    {
+      "id": "cpu_i9_14900k",
+      "model": "Intel Core i9-14900K",
+      "tdp_watt": 125,
+      "peak_power_watt": 253,
+      "socket": "LGA1700",
+      "generation_tier": "Modern Gen 14",
+      "recommended_gpu_max": "RTX 5090 / RTX 4090"
+    },
+    {
+      "id": "cpu_i7_14700k",
+      "model": "Intel Core i7-14700K",
+      "tdp_watt": 125,
+      "peak_power_watt": 253,
+      "socket": "LGA1700",
+      "generation_tier": "Modern Gen 14",
+      "recommended_gpu_max": "RTX 5080 / RTX 4080 Super"
+    },
+    {
+      "id": "cpu_i5_14400f",
+      "model": "Intel Core i5-14400F",
+      "tdp_watt": 65,
+      "peak_power_watt": 148,
+      "socket": "LGA1700",
+      "generation_tier": "Modern Gen 14",
+      "recommended_gpu_max": "RTX 4070 Ti / RX 7900 XT"
+    },
+    {
+      "id": "cpu_i5_13600k",
+      "model": "Intel Core i5-13600K",
+      "tdp_watt": 125,
+      "peak_power_watt": 181,
+      "socket": "LGA1700",
+      "generation_tier": "Modern Gen 13",
+      "recommended_gpu_max": "RTX 4080 / RX 7900 XTX"
+    },
+    {
+      "id": "cpu_i5_13400f",
+      "model": "Intel Core i5-13400F",
+      "tdp_watt": 65,
+      "peak_power_watt": 148,
+      "socket": "LGA1700",
+      "generation_tier": "Modern Gen 13",
+      "recommended_gpu_max": "RTX 4070 / RX 7800 XT"
+    },
+    {
+      "id": "cpu_i5_12400f",
+      "model": "Intel Core i5-12400F",
+      "tdp_watt": 65,
+      "peak_power_watt": 117,
+      "socket": "LGA1700",
+      "generation_tier": "Modern Gen 12",
+      "recommended_gpu_max": "RTX 4070 / RX 7800 XT"
+    },
+    {
+      "id": "cpu_i3_12100f",
+      "model": "Intel Core i3-12100F",
+      "tdp_watt": 58,
+      "peak_power_watt": 89,
+      "socket": "LGA1700",
+      "generation_tier": "Modern Gen 12 Entry",
+      "recommended_gpu_max": "RTX 4060 / RX 7600"
+    },
+    {
+      "id": "cpu_i7_10700k",
+      "model": "Intel Core i7-10700K",
+      "tdp_watt": 125,
+      "peak_power_watt": 229,
+      "socket": "LGA1200",
+      "generation_tier": "Legacy Gen 10",
+      "recommended_gpu_max": "RTX 3070 / RX 6700 XT"
+    },
+    {
+      "id": "cpu_i5_10400f",
+      "model": "Intel Core i5-10400F",
+      "tdp_watt": 65,
+      "peak_power_watt": 90,
+      "socket": "LGA1200",
+      "generation_tier": "Legacy Gen 10",
+      "recommended_gpu_max": "RTX 3060 / RX 6600 XT"
+    },
+    {
+      "id": "cpu_i5_9400f",
+      "model": "Intel Core i5-9400F",
+      "tdp_watt": 65,
+      "peak_power_watt": 85,
+      "socket": "LGA1151v2",
+      "generation_tier": "Legacy Gen 9",
+      "recommended_gpu_max": "RTX 2060S / GTX 1660S"
+    },
+    {
+      "id": "cpu_i7_4790",
+      "model": "Intel Core i7-4790",
+      "tdp_watt": 84,
+      "peak_power_watt": 95,
+      "socket": "LGA1150",
+      "generation_tier": "Vintage Gen 4",
+      "recommended_gpu_max": "GTX 1660S / GTX 1060"
+    },
+    {
+      "id": "cpu_i3_4160",
+      "model": "Intel Core i3-4160",
+      "tdp_watt": 54,
+      "peak_power_watt": 65,
+      "socket": "LGA1150",
+      "generation_tier": "Vintage Gen 4",
+      "recommended_gpu_max": "GTX 1050 Ti"
+    },
+    {
+      "id": "cpu_core2_q9650",
+      "model": "Intel Core 2 Quad Q9650",
+      "tdp_watt": 95,
+      "peak_power_watt": 115,
+      "socket": "LGA775",
+      "generation_tier": "Ancient Vintage",
+      "recommended_gpu_max": "GTX 750 Ti"
+    },
+    {
+      "id": "cpu_ryzen_9_9950x",
+      "model": "AMD Ryzen 9 9950X",
+      "tdp_watt": 170,
+      "peak_power_watt": 230,
+      "socket": "AM5",
+      "generation_tier": "Modern Zen 5 Flagship",
+      "recommended_gpu_max": "RTX 5090 / RTX 4090"
+    },
+    {
+      "id": "cpu_ryzen_7_9800x3d",
+      "model": "AMD Ryzen 7 9800X3D",
+      "tdp_watt": 120,
+      "peak_power_watt": 162,
+      "socket": "AM5",
+      "generation_tier": "Modern Zen 5 3D V-Cache (Gaming King)",
+      "recommended_gpu_max": "RTX 5090 / RTX 4090"
+    },
+    {
+      "id": "cpu_ryzen_7_7800x3d",
+      "model": "AMD Ryzen 7 7800X3D",
+      "tdp_watt": 120,
+      "peak_power_watt": 162,
+      "socket": "AM5",
+      "generation_tier": "Modern Zen 4 3D V-Cache",
+      "recommended_gpu_max": "RTX 5090 / RTX 4090"
+    },
+    {
+      "id": "cpu_ryzen_5_7600x",
+      "model": "AMD Ryzen 5 7600X",
+      "tdp_watt": 105,
+      "peak_power_watt": 142,
+      "socket": "AM5",
+      "generation_tier": "Modern Zen 4",
+      "recommended_gpu_max": "RTX 4070 Ti Super"
+    },
+    {
+      "id": "cpu_ryzen_5_7500f",
+      "model": "AMD Ryzen 5 7500F",
+      "tdp_watt": 65,
+      "peak_power_watt": 88,
+      "socket": "AM5",
+      "generation_tier": "Modern Zen 4 Entry",
+      "recommended_gpu_max": "RTX 4070 Super"
+    },
+    {
+      "id": "cpu_ryzen_7_5700x3d",
+      "model": "AMD Ryzen 7 5700X3D",
+      "tdp_watt": 105,
+      "peak_power_watt": 135,
+      "socket": "AM4",
+      "generation_tier": "Modern Zen 3 3D V-Cache",
+      "recommended_gpu_max": "RTX 4070 Ti / RX 7900 XT"
+    },
+    {
+      "id": "cpu_ryzen_5_5600",
+      "model": "AMD Ryzen 5 5600",
+      "tdp_watt": 65,
+      "peak_power_watt": 88,
+      "socket": "AM4",
+      "generation_tier": "Modern Zen 3",
+      "recommended_gpu_max": "RTX 4070 / RX 7800 XT"
+    },
+    {
+      "id": "cpu_ryzen_5_3600",
+      "model": "AMD Ryzen 5 3600",
+      "tdp_watt": 65,
+      "peak_power_watt": 88,
+      "socket": "AM4",
+      "generation_tier": "Legacy Zen 2",
+      "recommended_gpu_max": "RTX 3060 / RX 6600 XT"
+    }
+  ],
+  "motherboards": [
+    {
+      "id": "mb_h610m",
+      "model": "ASUS PRIME H610M-K DDR4",
+      "socket": "LGA1700",
+      "chipset": "H610",
+      "ram_type": "DDR4",
+      "ram_slots": 2,
+      "form_factor": "mATX",
+      "vrm_phases": "6+1+1",
+      "price_vnd": 1450000,
+      "supported_cpus": "Intel Gen 12/13/14 (i3, i5 non-K)",
+      "note": "Bo mạch quốc dân giá rẻ, tối ưu cho i3-12100F và i5-12400F"
+    },
+    {
+      "id": "mb_b760m_d4",
+      "model": "ASUS PRIME B760M-K DDR4",
+      "socket": "LGA1700",
+      "chipset": "B760",
+      "ram_type": "DDR4",
+      "ram_slots": 2,
+      "form_factor": "mATX",
+      "vrm_phases": "8+1",
+      "price_vnd": 2150000,
+      "supported_cpus": "Intel Gen 12/13/14 (i5-12400F, i5-13400F, i5-14400F)",
+      "note": "Dàn VRM có tản nhiệt, mở khóa điện năng CPU, chạy mượt i5"
+    },
+    {
+      "id": "mb_b760m_d5",
+      "model": "MSI B760M GAMING PLUS WIFI DDR5",
+      "socket": "LGA1700",
+      "chipset": "B760",
+      "ram_type": "DDR5",
+      "ram_slots": 4,
+      "form_factor": "mATX",
+      "vrm_phases": "12+1+1",
+      "price_vnd": 3400000,
+      "supported_cpus": "Intel Gen 12/13/14 (i5-13600K, i7-14700F)",
+      "note": "Hỗ trợ DDR5 tốc độ cao, tích hợp WiFi 6E & Bluetooth 5.3"
+    },
+    {
+      "id": "mb_z790_d5",
+      "model": "GIGABYTE Z790 AORUS ELITE AX DDR5",
+      "socket": "LGA1700",
+      "chipset": "Z790",
+      "ram_type": "DDR5",
+      "ram_slots": 4,
+      "form_factor": "ATX",
+      "vrm_phases": "16+1+2",
+      "price_vnd": 6500000,
+      "supported_cpus": "Intel Gen 13/14 Core i7/i9 K-Series",
+      "note": "Tối ưu ép xung CPU dòng K, tản nhiệt VRM hầm hố, PCIe 5.0"
+    },
+    {
+      "id": "mb_b650m_am5",
+      "model": "MSI PRO B650M-A WIFI DDR5",
+      "socket": "AM5",
+      "chipset": "B650",
+      "ram_type": "DDR5",
+      "ram_slots": 4,
+      "form_factor": "mATX",
+      "vrm_phases": "8+2+1",
+      "price_vnd": 3200000,
+      "supported_cpus": "AMD Ryzen 7000/8000/9000 (Ryzen 5 7500F, Ryzen 7 7700)",
+      "note": "Socket AM5 tuổi thọ dài tới 2027+, hỗ trợ RAM DDR5 EXPO"
+    },
+    {
+      "id": "mb_b650e_am5",
+      "model": "ASUS ROG STRIX B650E-F GAMING WIFI",
+      "socket": "AM5",
+      "chipset": "B650E",
+      "ram_type": "DDR5",
+      "ram_slots": 4,
+      "form_factor": "ATX",
+      "vrm_phases": "12+2",
+      "price_vnd": 5800000,
+      "supported_cpus": "AMD Ryzen 7 7800X3D, Ryzen 7 9800X3D",
+      "note": "Bo mạch chuyên Gaming High-End, hỗ trợ chuẩn PCIe 5.0 cho GPU & SSD"
+    },
+    {
+      "id": "mb_b550m_am4",
+      "model": "GIGABYTE B550M AORUS ELITE DDR4",
+      "socket": "AM4",
+      "chipset": "B550",
+      "ram_type": "DDR4",
+      "ram_slots": 4,
+      "form_factor": "mATX",
+      "vrm_phases": "5+3",
+      "price_vnd": 2300000,
+      "supported_cpus": "AMD Ryzen 5 5600, Ryzen 7 5700X, Ryzen 7 5800X3D",
+      "note": "Nền tảng AM4 tối ưu p/p chi phí cực tốt"
+    }
+  ],
+  "ram": [
+    {
+      "id": "ram_16gb_d4_3200",
+      "model": "16GB (2x8GB) Kingston Fury Beast Black",
+      "type": "DDR4",
+      "capacity_gb": 16,
+      "configuration": "2x8GB Dual Channel",
+      "bus_speed_mhz": 3200,
+      "cas_latency": "CL16",
+      "price_vnd": 850000,
+      "note": "Chuẩn kênh đôi tối ưu băng thông cho mọi cấu hình gaming phổ thông"
+    },
+    {
+      "id": "ram_32gb_d4_3200",
+      "model": "32GB (2x16GB) Corsair Vengeance LPX",
+      "type": "DDR4",
+      "capacity_gb": 32,
+      "configuration": "2x16GB Dual Channel",
+      "bus_speed_mhz": 3200,
+      "cas_latency": "CL16",
+      "price_vnd": 1650000,
+      "note": "Dung lượng dồi dào cho thiết kế đồ họa, Premiere Pro và đa nhiệm mượt"
+    },
+    {
+      "id": "ram_32gb_d5_5600",
+      "model": "32GB (2x16GB) Kingston Fury Beast DDR5",
+      "type": "DDR5",
+      "capacity_gb": 32,
+      "configuration": "2x16GB Dual Channel",
+      "bus_speed_mhz": 5600,
+      "cas_latency": "CL36",
+      "price_vnd": 2350000,
+      "note": "Băng thông gấp đôi DDR4, tích hợp On-die ECC tự sửa lỗi hạt"
+    },
+    {
+      "id": "ram_32gb_d5_6000_cl30",
+      "model": "32GB (2x16GB) G.Skill Flare X5 DDR5",
+      "type": "DDR5",
+      "capacity_gb": 32,
+      "configuration": "2x16GB Dual Channel",
+      "bus_speed_mhz": 6000,
+      "cas_latency": "CL30",
+      "price_vnd": 2850000,
+      "note": "Độ trễ thấp CL30 'Điểm ngọt ngào' (Sweet Spot) tối thượng cho Ryzen 7000/9000 & Intel Gen 14"
+    }
+  ],
+  "storage": [
+    {
+      "id": "ssd_512gb_nv2",
+      "model": "512GB Kingston NV2 NVMe M.2 2280",
+      "interface": "PCIe 4.0 x4 NVMe",
+      "capacity_gb": 512,
+      "read_speed_mb": 3500,
+      "write_speed_mb": 2100,
+      "price_vnd": 850000,
+      "note": "Tốc độ đọc gấp 7 lần SSD SATA 2.5 inch, khởi động Windows trong 5 giây"
+    },
+    {
+      "id": "ssd_1tb_nv2",
+      "model": "1TB Kingston NV2 NVMe M.2 2280",
+      "interface": "PCIe 4.0 x4 NVMe",
+      "capacity_gb": 1024,
+      "read_speed_mb": 3500,
+      "write_speed_mb": 2800,
+      "price_vnd": 1450000,
+      "note": "Dung lượng chuẩn 1TB thoải mái cài hệ điều hành và 8-10 game AAA nặng"
+    },
+    {
+      "id": "ssd_1tb_990pro",
+      "model": "1TB Samsung 990 Pro NVMe PCIe 4.0",
+      "interface": "PCIe 4.0 x4 NVMe",
+      "capacity_gb": 1024,
+      "read_speed_mb": 7450,
+      "write_speed_mb": 6900,
+      "price_vnd": 2650000,
+      "note": "Ông vua tốc độ SSD Gen 4, tích hợp DRAM Cache xử lý render file 4K mượt mà"
+    }
+  ],
+  "psus": [
+    {
+      "id": "psu_550w_bronze",
+      "model": "Xigmatek X-Power III 550 (500W Real) / FSP 550W",
+      "wattage": 550,
+      "efficiency_cert": "80 Plus Bronze (85% Hiệu suất)",
+      "pci_e_connectors": "2x (6+2-pin)",
+      "price_vnd": 850000,
+      "suitable_for": "Cấu hình i3/i5 kết hợp GTX 1660S / RTX 3050"
+    },
+    {
+      "id": "psu_650w_bronze",
+      "model": "MSI MAG A650BN 650W",
+      "wattage": 650,
+      "efficiency_cert": "80 Plus Bronze (Tụ Nhật DC-to-DC)",
+      "pci_e_connectors": "2x (6+2-pin)",
+      "price_vnd": 1200000,
+      "suitable_for": "Cân mượt RTX 2060S, RTX 3060, RTX 4060, RTX 4060 Ti"
+    },
+    {
+      "id": "psu_750w_bronze",
+      "model": "Deepcool PK750D 750W",
+      "wattage": 750,
+      "efficiency_cert": "80 Plus Bronze",
+      "pci_e_connectors": "4x (6+2-pin)",
+      "price_vnd": 1600000,
+      "suitable_for": "Cân mượt RTX 3070, RTX 4070, RX 7700 XT"
+    },
+    {
+      "id": "psu_850w_gold",
+      "model": "Corsair RM850e 850W ATX 3.0 PCIe 5.0",
+      "wattage": 850,
+      "efficiency_cert": "80 Plus Gold Fully Modular",
+      "pci_e_connectors": "1x 12VHPWR 16-pin + 4x (6+2-pin)",
+      "price_vnd": 3150000,
+      "suitable_for": "Chuẩn ATX 3.0 chuyên trị RTX 4070 Ti Super, RTX 4080 Super, RTX 5070"
+    },
+    {
+      "id": "psu_1000w_gold",
+      "model": "MSI MAG A1000GL PCIE5 1000W 80 Plus Gold",
+      "wattage": 1000,
+      "efficiency_cert": "80 Plus Gold ATX 3.0",
+      "pci_e_connectors": "1x 12V-2x6 600W + 4x (6+2-pin)",
+      "price_vnd": 4200000,
+      "suitable_for": "Đặc trị quái vật RTX 4090, RTX 5080, RTX 5090"
+    }
+  ],
+  "coolers": [
+    {
+      "id": "cooler_cr1000",
+      "model": "Jonsbo CR-1000 EVO ARGB",
+      "type": "Tản nhiệt khí (Air Cooler)",
+      "heatpipes": 4,
+      "max_tdp_watt": 180,
+      "supported_sockets": [
+        "LGA1700",
+        "LGA1200",
+        "AM4",
+        "AM5"
+      ],
+      "price_vnd": 350000,
+      "note": "Làm mát cực êm, giữ i5-12400F dưới 65 độ C khi full load"
+    },
+    {
+      "id": "cooler_pa120",
+      "model": "Thermalright Peerless Assassin 120 SE",
+      "type": "Tản khí tháp đôi (Dual Tower)",
+      "heatpipes": 6,
+      "max_tdp_watt": 245,
+      "supported_sockets": [
+        "LGA1700",
+        "LGA1851",
+        "AM4",
+        "AM5"
+      ],
+      "price_vnd": 790000,
+      "note": "Vua tản khí thế giới, cân mượt i7-13700F, i5-14600K và Ryzen 7 7800X3D"
+    },
+    {
+      "id": "cooler_aio_240",
+      "model": "Deepcool LE520 ARGB 240mm",
+      "type": "Tản nhiệt nước All-In-One (AIO 240)",
+      "radiator_size": "240mm",
+      "max_tdp_watt": 260,
+      "supported_sockets": [
+        "LGA1700",
+        "AM4",
+        "AM5"
+      ],
+      "price_vnd": 1450000,
+      "note": "Thẩm mỹ cao, hiệu năng giải nhiệt mạnh mẽ cho case bể cá"
+    },
+    {
+      "id": "cooler_aio_360",
+      "model": "Thermalright Frozen Warframe 360 ARGB LCD",
+      "type": "Tản nhiệt nước AIO 360 có màn hình LCD",
+      "radiator_size": "360mm",
+      "max_tdp_watt": 320,
+      "supported_sockets": [
+        "LGA1700",
+        "LGA1851",
+        "AM4",
+        "AM5"
+      ],
+      "price_vnd": 2450000,
+      "note": "Màn hình IPS hiển thị nhiệt độ CPU/GPU theo thời gian thực, tản nhiệt tối thượng"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case_xigmatek_gaming",
+      "model": "Xigmatek NYX Air 3F (Kèm sẵn 3 Fan RGB)",
+      "form_factor_support": [
+        "mATX",
+        "Mini-ITX"
+      ],
+      "max_gpu_length_mm": 320,
+      "max_cpu_cooler_height_mm": 160,
+      "side_panel": "Kính cường lực hông",
+      "price_vnd": 600000,
+      "note": "Mặt lưới Airflow trước hút gió mát mẻ, nhỏ gọn tiết kiệm diện tích"
+    },
+    {
+      "id": "case_montech_air100",
+      "model": "Montech Air 100 ARGB (Kèm sẵn 4 Fan ARGB PWM)",
+      "form_factor_support": [
+        "mATX",
+        "Mini-ITX"
+      ],
+      "max_gpu_length_mm": 330,
+      "max_cpu_cooler_height_mm": 165,
+      "side_panel": "Kính cường lực cánh mở",
+      "price_vnd": 1050000,
+      "note": "Vỏ case mATX đối lưu luồng khí tốt nhất phân khúc tầm trung"
+    },
+    {
+      "id": "case_aquarium_argb",
+      "model": "Vỏ Bể Cá Panorama Mik Morax 3FA (Kèm 3 Fan vô cực)",
+      "form_factor_support": [
+        "ATX",
+        "mATX",
+        "Mini-ITX"
+      ],
+      "max_gpu_length_mm": 360,
+      "max_cpu_cooler_height_mm": 165,
+      "side_panel": "Kính góc 2 mặt không cột chắn",
+      "price_vnd": 1250000,
+      "note": "Góc nhìn Panorama 2 mặt kính khoe trọn vẹn toàn bộ linh kiện bên trong"
+    }
+  ]
+}
