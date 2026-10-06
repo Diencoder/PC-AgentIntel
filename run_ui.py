@@ -59,14 +59,28 @@ st.markdown("""
         display: inline-block;
     }
     
-    .hero-title {
+    .hero-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .hero-icon {
+        font-size: 2.7rem;
+        line-height: 1;
+        display: inline-block;
+    }
+    
+    .hero-title-text {
         font-size: 2.8rem;
         font-weight: 800;
         background: linear-gradient(135deg, #0F172A 0%, #1E40AF 50%, #4338CA 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 8px;
         letter-spacing: -0.03em;
+        line-height: 1.2;
     }
     
     .hero-sub {
@@ -206,7 +220,10 @@ st.markdown("""
         <span class="badge-dot"></span>
         <span>✨ NEXT-GEN AI HARDWARE ARCHITECT • GEMINI 3.5 FLASH</span>
     </div>
-    <div class="hero-title">💻 PC-AgentIntel</div>
+    <div class="hero-title-wrapper">
+        <span class="hero-icon">💻</span>
+        <span class="hero-title-text">PC-AgentIntel</span>
+    </div>
     <div class="hero-sub">
         Chuyên gia AI đa tác tử phân tích nhu cầu phần cứng, tính công suất tải nguồn thực tế, đo nghẽn cổ chai và tối ưu cấu hình 8 món bám sát giá thị trường Việt Nam.
     </div>
@@ -235,60 +252,10 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Session State for interactive quick prompts
-if "current_query" not in st.session_state:
-    st.session_state.current_query = ""
-if "auto_execute" not in st.session_state:
-    st.session_state.auto_execute = False
-
-# Quick prompt chips
-st.markdown("<p style='font-size: 0.88rem; font-weight: 600; color: #475569; margin-bottom: 6px;'>💡 Gợi ý yêu cầu thực tế (nhấn để trải nghiệm ngay):</p>", unsafe_allow_html=True)
-p1, p2, p3, p4, p5 = st.columns(5)
-
-with p1:
-    st.markdown('<div class="chip-btn">', unsafe_allow_html=True)
-    if st.button("🎮 Gaming 15Tr", key="btn_g15"):
-        st.session_state.current_query = "tôi muốn build pc ngân sách 15 triệu chơi game"
-        st.session_state.auto_execute = True
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with p2:
-    st.markdown('<div class="chip-btn">', unsafe_allow_html=True)
-    if st.button("💼 Đồ Họa 25Tr", key="btn_d25"):
-        st.session_state.current_query = "cần build pc 25 triệu làm đồ họa 3D render blender"
-        st.session_state.auto_execute = True
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with p3:
-    st.markdown('<div class="chip-btn">', unsafe_allow_html=True)
-    if st.button("⚡ Tiết Kiệm 10Tr", key="btn_t10"):
-        st.session_state.current_query = "build pc 10 triệu chơi lol valorant học tập"
-        st.session_state.auto_execute = True
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with p4:
-    st.markdown('<div class="chip-btn">', unsafe_allow_html=True)
-    if st.button("🔄 Có sẵn i5 12400F", key="btn_h_cpu"):
-        st.session_state.current_query = "tôi có chip i5 12400f, cần 8 triệu ráp các linh kiện còn lại"
-        st.session_state.auto_execute = True
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with p5:
-    st.markdown('<div class="chip-btn">', unsafe_allow_html=True)
-    if st.button("🔌 Nâng Card 500W", key="btn_up_gpu"):
-        st.session_state.current_query = "tôi đang có nguồn 550w và chip i5 12400f, có 5 triệu nâng cấp card đồ họa cũ"
-        st.session_state.auto_execute = True
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-
 # Ô nhập liệu duy nhất
 user_query = st.text_area(
     "Nhập yêu cầu cấu hình của bạn:",
-    value=st.session_state.current_query,
+    value="",
     height=85,
     placeholder="Ví dụ: 'tôi muốn build pc ngân sách 15 triệu chơi game' hoặc 'tôi có chip i5 12400f nguồn 550w, có 5 triệu tìm card cũ'..."
 )
@@ -297,12 +264,7 @@ st.markdown('<div class="main-btn">', unsafe_allow_html=True)
 btn_run = st.button("🚀 Gửi Yêu Cầu Tư Vấn AI", type="primary")
 st.markdown('</div>', unsafe_allow_html=True)
 
-should_run = (btn_run or st.session_state.auto_execute) and bool(user_query.strip())
-
-if should_run:
-    # Reset cờ auto_execute để không bị chạy lặp khi refresh
-    st.session_state.auto_execute = False
-    st.session_state.current_query = user_query
+if btn_run and user_query.strip():
     
     orchestrator = PCAgentOrchestrator()
     
@@ -372,12 +334,22 @@ if should_run:
                 # Tổng kết tài chính & kỹ thuật
                 m_col1, m_col2, m_col3 = st.columns(3)
                 with m_col1:
-                    cost_val = build.get('actual_cost_vnd', build['total_price_vnd'])
+                    cost_val = build.get('actual_cost_vnd', build.get('total_cost', 0))
                     st.metric("Tổng Chi Phí Cần Chi", f"{cost_val:,} đ")
                 with m_col2:
                     st.metric("Độ Tương Thích Socket/RAM", "100% Hoàn Hảo", delta="Đạt chuẩn")
                 with m_col3:
-                    st.metric("Tải Nguồn Đề Xuất", f"{build['min_psu_watt']}W", delta="Headroom an toàn")
+                    # Xác định công suất nguồn an toàn từ linh kiện
+                    psu_watt_val = build.get('min_psu_watt')
+                    if not psu_watt_val:
+                        for p in build.get("parts", []):
+                            if "Nguồn" in p.get("category", "") or "PSU" in p.get("category", ""):
+                                m = re.search(r'(\d+)\s*W', p.get("item", ""), re.IGNORECASE) or re.search(r'(\d+)', p.get("item", ""))
+                                if m:
+                                    psu_watt_val = m.group(1)
+                                    break
+                    psu_disp = f"{psu_watt_val}W" if psu_watt_val else "Chuẩn 80 Plus"
+                    st.metric("Tải Nguồn Đề Xuất", psu_disp, delta="Headroom an toàn")
                     
                 # Lời tư vấn chuyên sâu
                 st.markdown("#### 💡 Bài Tư Vấn & Đánh Giá Kỹ Thuật Chuyên Sâu")
