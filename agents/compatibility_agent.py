@@ -151,20 +151,27 @@ class CompatibilityAgent:
         # TỔNG HỢP LỜI TƯ VẤN CỦA AGENT 2 BẰNG LLM HOẶC HEURISTIC
         agent2_consultation = ""
         if self.client:
-            try:
-                build_summary = f"Yêu cầu: {contract.user_raw_query}. Ngân sách: {budget_text}. Mục đích: {contract.purpose}. Nhận định từ Agent 1: {contract.agent1_brief}."
-                if full_pc_data:
-                    build_summary += f" Cấu hình trọn bộ đề xuất: {full_pc_data['parts']}, Tổng chi phí: {full_pc_data['total_cost']:,} đ."
-                if recommendations:
-                    build_summary += f" Card đồ họa ứng viên: {[r.gpu.model for r in recommendations]}."
-                
-                resp = self.client.models.generate_content(
-                    model=self.model_name,
-                    contents=f"{AGENT2_SYSTEM_PROMPT}\n\nDữ liệu kiểm định phần cứng:\n{build_summary}\n\nHãy viết lời tư vấn hoàn chỉnh:"
-                )
-                agent2_consultation = resp.text.strip()
-            except Exception:
-                pass
+            models_to_try = [self.model_name, "gemini-3.5-flash-lite", "gemini-flash-lite-latest"]
+            seen = set()
+            models_to_try = [m for m in models_to_try if m and not (m in seen or seen.add(m))]
+
+            build_summary = f"Yêu cầu: {contract.user_raw_query}. Ngân sách: {budget_text}. Mục đích: {contract.purpose}. Nhận định từ Agent 1: {contract.agent1_brief}."
+            if full_pc_data:
+                build_summary += f" Cấu hình trọn bộ đề xuất: {full_pc_data['parts']}, Tổng chi phí: {full_pc_data['total_cost']:,} đ."
+            if recommendations:
+                build_summary += f" Card đồ họa ứng viên: {[r.gpu.model for r in recommendations]}."
+
+            for m in models_to_try:
+                try:
+                    resp = self.client.models.generate_content(
+                        model=m,
+                        contents=f"{AGENT2_SYSTEM_PROMPT}\n\nDữ liệu kiểm định phần cứng:\n{build_summary}\n\nHãy viết lời tư vấn hoàn chỉnh:"
+                    )
+                    agent2_consultation = resp.text.strip()
+                    if agent2_consultation:
+                        break
+                except Exception:
+                    continue
 
         if not agent2_consultation:
             # Fallback tư vấn tự nhiên sâu sắc

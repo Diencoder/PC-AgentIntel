@@ -77,22 +77,27 @@ class SpecAnalystAgent:
 
     def analyze(self, query: str) -> HardwareSpecContract:
         if self.client:
-            try:
-                prompt = f"{SYSTEM_PROMPT}\n\nYêu cầu của người dùng: '{query}'"
-                resp = self.client.models.generate_content(
-                    model=self.model_name,
-                    contents=prompt
-                )
-                text = resp.text.strip()
-                if "```json" in text:
-                    text = text.split("```json")[1].split("```")[0].strip()
-                elif "```" in text:
-                    text = text.split("```")[1].split("```")[0].strip()
-                data = json.loads(text)
-                data["user_raw_query"] = query
-                return HardwareSpecContract(**data)
-            except Exception:
-                pass
+            models_to_try = [self.model_name, "gemini-3.5-flash-lite", "gemini-flash-lite-latest"]
+            seen = set()
+            models_to_try = [m for m in models_to_try if m and not (m in seen or seen.add(m))]
+            
+            prompt = f"{SYSTEM_PROMPT}\n\nYêu cầu của người dùng: '{query}'"
+            for m in models_to_try:
+                try:
+                    resp = self.client.models.generate_content(
+                        model=m,
+                        contents=prompt
+                    )
+                    text = resp.text.strip()
+                    if "```json" in text:
+                        text = text.split("```json")[1].split("```")[0].strip()
+                    elif "```" in text:
+                        text = text.split("```")[1].split("```")[0].strip()
+                    data = json.loads(text)
+                    data["user_raw_query"] = query
+                    return HardwareSpecContract(**data)
+                except Exception:
+                    continue
 
         return self._fallback_heuristic_parse(query)
 
