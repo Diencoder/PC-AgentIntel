@@ -371,6 +371,143 @@ class FullPCBuildTool:
                 "psu": f"Bộ nguồn ({psu_name}) đạt chuẩn an toàn, dư dả công suất thực bảo vệ linh kiện chống sụt áp.",
                 "cooler_case": f"Hệ thống tản nhiệt và vỏ case ({case_name}) giữ máy luôn mát mẻ và êm ái trong không gian làm việc."
             }
+        elif budget <= 48_000_000:
+            cpu_model = "AMD Ryzen 7 7800X3D"
+            cpu_socket = "AM5"
+            mb_name = "ASUS ROG STRIX B650E-F GAMING WIFI"
+            mb_socket = "AM5"
+            ram_name = "32GB (2x16GB) G.Skill Flare X5 DDR5 6000MHz CL30"
+            ram_type = "DDR5"
+            ssd_name = "1TB Samsung 990 Pro NVMe PCIe 4.0 M.2"
+            vga_name = "NVIDIA GeForce RTX 4070 Super 12GB GDDR6X"
+            psu_name = "Corsair RM850e 850W ATX 3.0 PCIe 5.0 Gold"
+            psu_watt = 850
+            cooler_name = "Deepcool LE520 ARGB 240mm (Tản nhiệt nước AIO)"
+            case_name = "Vỏ Bể Cá Panorama Mik Morax 3FA (Kèm 3 Fan vô cực)"
+            parts = [
+                {"category": "Vi Xử Lý (CPU)", "item": f"{cpu_model} (Gaming King 96MB 3D V-Cache)", "price": 9_500_000, "spec": "Socket AM5, 8 nhân 16 luồng, CPU chơi game số 1 thế giới"},
+                {"category": "Bo Mạch Chủ (Main)", "item": mb_name, "price": 5_800_000, "spec": "Socket AM5, PCIe 5.0 cho VGA & SSD, 12+2 Phase nguồn"},
+                {"category": "Bộ Nhớ RAM", "item": ram_name, "price": 2_850_000, "spec": "DDR5 6000MHz độ trễ siêu thấp CL30 Sweet Spot"},
+                {"category": "Ổ Cứng (SSD)", "item": ssd_name, "price": 2_650_000, "spec": "Đọc 7450MB/s, có DRAM Cache cho render file nặng"},
+                {"category": "Card Đồ Họa (VGA)", "item": vga_name, "price": 16_500_000, "spec": "12GB GDDR6X, Ray Tracing & DLSS 3.5 đỉnh cao"},
+                {"category": "Nguồn Máy Tính (PSU)", "item": psu_name, "price": 3_150_000, "spec": "850W 80 Plus Gold Fully Modular, chuẩn ATX 3.0 cáp 16-pin"},
+                {"category": "Tản Nhiệt CPU", "item": cooler_name, "price": 1_450_000, "spec": "Tản nước AIO 240mm ARGB làm mát êm ái"},
+                {"category": "Vỏ Case Máy Tính", "item": case_name, "price": 1_250_000, "spec": "Bể cá vô cực Panorama 2 mặt kính cường lực"}
+            ]
+            advice = (
+                "Cấu hình Cao Cấp 2K/4K: Chinh phục mọi tựa game ở độ phân giải 2K/4K Ultra Settings. "
+                "Công nghệ 3D V-Cache giúp chỉ số 1% Low FPS cực cao, triệt tiêu 100% hiện tượng drop khung hình."
+            )
+            upgrade_path = "Nguồn chuẩn ATX 3.0 PCIe 5.0 sẵn sàng cắm thẳng các dòng card quái vật tương lai như RTX 5080/5090 mà không cần đầu chuyển!"
+
+        elif budget <= 78_000_000:
+            # Phân khúc Siêu Phẩm 70 Triệu: RTX 4080 Super + 64GB DDR5 + 2TB 990 Pro + Nguồn 1000W Gold
+            cpu_model = "AMD Ryzen 7 7800X3D"
+            cpu_socket = "AM5"
+            mb_name = "ASUS ROG STRIX X670E-A GAMING WIFI"
+            mb_socket = "AM5"
+            ram_name = "64GB (2x32GB) Corsair Dominator Titanium RGB DDR5 6000MHz CL30"
+            ram_type = "DDR5"
+            ssd_name = "2TB Samsung 990 Pro NVMe PCIe 4.0 M.2"
+            vga_name = "NVIDIA GeForce RTX 4080 Super 16GB GDDR6X"
+            psu_name = "Corsair RM1000x Shift 1000W 80 Plus Gold ATX 3.0 PCIe 5.0"
+            psu_watt = 1000
+            cooler_name = "Thermalright Frozen Warframe 360 ARGB (Màn hình LCD 2.4 inch hiển thị nhiệt độ)"
+            case_name = "Vỏ Bể Cá Cao Cấp Lian Li O11 Dynamic EVO RGB Black"
+            parts = [
+                {"category": "Vi Xử Lý (CPU)", "item": f"{cpu_model} (Vua Gaming Thế Giới 96MB 3D V-Cache)", "price": 9_500_000, "spec": "Socket AM5, 8 nhân 16 luồng, IPC gaming vô địch"},
+                {"category": "Bo Mạch Chủ (Main)", "item": mb_name, "price": 8_500_000, "spec": "Chipset X670E cao cấp, PCIe 5.0 x16, dàn VRM 16+2 Phase cực mát"},
+                {"category": "Bộ Nhớ RAM", "item": ram_name, "price": 5_800_000, "spec": "64GB Dual Channel DDR5 6000MHz CL30, LED RGB đồng bộ iCUE"},
+                {"category": "Ổ Cứng (SSD)", "item": ssd_name, "price": 4_600_000, "spec": "2TB NVMe PCIe Gen 4x4 (Đọc 7450MB/s - Ghi 6900MB/s), DRAM Cache 2GB"},
+                {"category": "Card Đồ Họa (VGA)", "item": vga_name, "price": 27_500_000, "spec": "16GB GDDR6X 256-bit, Quái vật cày game 4K Ray Tracing & AI Render"},
+                {"category": "Nguồn Máy Tính (PSU)", "item": psu_name, "price": 4_850_000, "spec": "1000W 80 Plus Gold, cáp cắm hông tiện lợi, chuẩn ATX 3.0 12V-2x6"},
+                {"category": "Tản Nhiệt CPU", "item": cooler_name, "price": 3_200_000, "spec": "AIO 360mm 3 Fan ARGB, màn hình LCD tùy biến GIF & đo nhiệt độ thời gian thực"},
+                {"category": "Vỏ Case Máy Tính", "item": case_name, "price": 3_800_000, "spec": "Khung nhôm cao cấp, kính cường lực 2 mặt góc nhìn Panorama thoáng đãng"}
+            ]
+            advice = (
+                "Cấu hình Siêu Phẩm Hi-End 70 Triệu: Tối ưu chuẩn chỉ ngân sách cho cỗ máy chiến game 4K Max Settings và Đồ họa 3D Render chuyên nghiệp. "
+                "Trang bị Card RTX 4080 Super 16GB cùng CPU 7800X3D số 1 thế giới, kết hợp bộ nhớ khủng 64GB DDR5 và màn hình LCD tản nhiệt nước cá tính."
+            )
+            upgrade_path = "Nguồn 1000W Gold và Bo mạch chủ X670E sẵn sàng cắm thẳng RTX 5090 hoặc Ryzen 9 9950X3D trong tương lai mà không cần thay đổi bất kỳ linh kiện nào!"
+
+        else:
+            # Phân khúc Tối Thượng God-Tier > 80 Triệu: RTX 4090 24GB + 64GB DDR5 + X670E + 1200W Platinum
+            cpu_model = "AMD Ryzen 7 7800X3D"
+            cpu_socket = "AM5"
+            mb_name = "ASUS ROG CROSSHAIR X670E HERO"
+            mb_socket = "AM5"
+            ram_name = "64GB (2x32GB) G.Skill Trident Z5 RGB DDR5 6400MHz CL32"
+            ram_type = "DDR5"
+            ssd_name = "2TB Samsung 990 Pro NVMe PCIe 4.0 M.2 Heatsink"
+            vga_name = "NVIDIA GeForce RTX 4090 24GB GDDR6X"
+            psu_name = "Seasonic Prime TX-1200 1200W 80 Plus Titanium ATX 3.0"
+            psu_watt = 1200
+            cooler_name = "NZXT Kraken Elite 360 RGB Black (Màn hình LCD 2.36 inch 60Hz)"
+            case_name = "Vỏ Case Flagship Lian Li O11 Dynamic EVO XL"
+            parts = [
+                {"category": "Vi Xử Lý (CPU)", "item": f"{cpu_model} (Gaming King 96MB 3D V-Cache)", "price": 9_500_000, "spec": "Socket AM5, 8 nhân 16 luồng, CPU chơi game số 1 thế giới"},
+                {"category": "Bo Mạch Chủ (Main)", "item": mb_name, "price": 13_500_000, "spec": "ROG Crosshair đỉnh cao, 18+2+2 Phase nguồn, PCIe 5.0, WiFi 6E"},
+                {"category": "Bộ Nhớ RAM", "item": ram_name, "price": 6_200_000, "spec": "64GB Dual Channel DDR5 6400MHz, LED RGB rực rỡ"},
+                {"category": "Ổ Cứng (SSD)", "item": ssd_name, "price": 4_900_000, "spec": "2TB NVMe PCIe Gen 4x4 (Đọc 7450MB/s), có sẵn tản nhiệt kim loại"},
+                {"category": "Card Đồ Họa (VGA)", "item": vga_name, "price": 46_000_000, "spec": "24GB GDDR6X 384-bit, Trùm cuối đồ họa & mô hình AI thế giới"},
+                {"category": "Nguồn Máy Tính (PSU)", "item": psu_name, "price": 7_500_000, "spec": "1200W 80 Plus Titanium chuẩn cao nhất thế giới, ATX 3.0"},
+                {"category": "Tản Nhiệt CPU", "item": cooler_name, "price": 6_800_000, "spec": "Tản AIO đỉnh cao nhất thị trường với màn hình LCD 60Hz siêu nét"},
+                {"category": "Vỏ Case Máy Tính", "item": case_name, "price": 5_200_000, "spec": "Case khổng lồ Full Tower, đối lưu không khí đẳng cấp phòng máy trạm"}
+            ]
+            advice = (
+                "Cấu hình Đỉnh Cao Vũ Trụ (God-Tier): Trùm cuối phần cứng không thỏa hiệp. "
+                "Sở hữu Card đồ họa RTX 4090 24GB mạnh nhất hành tinh, cân mượt mọi tác vụ AI Local, Render 8K và Gaming 4K Ray Tracing Max Settings."
+            )
+            upgrade_path = "Dàn máy trạm tối thượng sẵn sàng đón đầu kỷ nguyên đồ họa và AI trong suốt 5-8 năm tới!"
+
+        total_cost = sum(p["price"] for p in parts)
+
+        compatibility_checks = [
+            {
+                "aspect": "CPU <=> Bo Mạch Chủ (Socket)",
+                "status": "HOÀN HẢO",
+                "detail": f"CPU {cpu_model} khớp hoàn toàn chân socket {cpu_socket} trên {mb_name}."
+            },
+            {
+                "aspect": "RAM <=> Bo Mạch Chủ (Chuẩn DDR)",
+                "status": "HOÀN HẢO",
+                "detail": f"RAM chuẩn {ram_type} khớp tuyệt đối khe cắm trên bo mạch chủ."
+            },
+            {
+                "aspect": "Tản Nhiệt <=> CPU (Nhiệt năng TDP)",
+                "status": "AN TOÀN MÁT MẺ",
+                "detail": f"{cooler_name} giải nhiệt dư tải, máy vận hành êm ái không tiếng ồn."
+            },
+            {
+                "aspect": "Card Đồ Họa <=> Vỏ Case",
+                "status": "VỪA VẶN",
+                "detail": "Kích thước gọn gàng, tương thích tuyệt đối với kích thước vỏ case."
+            },
+            {
+                "aspect": "Công Suất Nguồn <=> Tổng Điện Năng",
+                "status": "DƯ TẢI AN TOÀN",
+                "detail": f"Nguồn {psu_watt}W chuẩn công suất thực, mức tiêu thụ dưới 50% giúp hệ thống chạy mát mẻ bền bỉ suốt 5-10 năm."
+            }
+        ]
+
+        if purpose == "Đồ họa & Render":
+            detailed_component_breakdown = {
+                "cpu_main": f"Sự kết hợp giữa CPU ({cpu_model}) và Mainboard ({mb_name}) đảm bảo dàn phase nguồn VRM tản nhiệt tốt, duy trì xung nhịp cao ổn định khi render liên tục nhiều giờ.",
+                "ram": f"Dung lượng ({ram_name}) dồi dào, đảm bảo không bị tràn bộ nhớ (Out of Memory) khi preview timeline 4K và dựng mô hình 3D đa giác cao.",
+                "ssd": f"Tốc độ đọc ghi NVMe của ({ssd_name}) giúp load các bộ thư viện texture 3D dung lượng lớn và xuất project video tức thì.",
+                "gpu": f"Sức mạnh của ({vga_name}) với nhân CUDA/Tensor hỗ trợ tăng tốc GPU Rendering (OptiX, CUDA trong Blender, Premiere) và tính năng AI Denoise.",
+                "psu": f"Bộ nguồn ({psu_name}) công suất thực đảm bảo hệ thống render nặng qua đêm an toàn tuyệt đối, chống đoản mạch và sụt áp.",
+                "cooler_case": f"Hệ thống làm mát ({cooler_name}) và vỏ case ({case_name}) tạo luồng gió đối lưu liên tục, giải nhiệt nhanh giữ nhiệt độ CPU dưới 70°C."
+            }
+        elif any(w in purpose for w in ["Văn phòng", "Học tập"]) or budget < 7_000_000:
+            detailed_component_breakdown = {
+                "cpu_main": f"Sự kết hợp giữa CPU ({cpu_model}) và Mainboard ({mb_name}) đảm bảo dàn phase nguồn VRM cấp điện ổn định, hỗ trợ xuất đa màn hình làm việc.",
+                "ram": f"Bộ nhớ RAM ({ram_name}) giúp đa nhiệm mượt mà, mở hàng chục tab trình duyệt và file văn phòng cùng lúc.",
+                "ssd": f"Ổ cứng SSD ({ssd_name}) đạt tốc độ đọc ghi chuẩn NVMe Gen 4, mở máy và tải tài liệu chỉ trong vài giây.",
+                "gpu": f"Xử lý hình ảnh ({vga_name}) tối ưu chi phí, không tỏa nhiệt và tiết kiệm điện tối đa.",
+                "psu": f"Bộ nguồn ({psu_name}) đạt chuẩn an toàn, dư dả công suất thực bảo vệ linh kiện chống sụt áp.",
+                "cooler_case": f"Hệ thống tản nhiệt và vỏ case ({case_name}) giữ máy luôn mát mẻ và êm ái trong không gian làm việc."
+            }
         else:
             detailed_component_breakdown = {
                 "cpu_main": f"Sự kết hợp giữa CPU ({cpu_model}) và Mainboard ({mb_name}) tối ưu hiệu năng đơn nhân và IPC cao, triệt tiêu nghẽn cổ chai và ổn định 1% Low FPS.",
